@@ -76,6 +76,7 @@ function NovoQuestionarioPage() {
                 setAlternativa3("");
                 setAlternativa4("");
                 setImagem(null);
+
                 console.log(novaPergunta);
             })
             .catch((error) => {
@@ -161,16 +162,16 @@ function NovoQuestionarioPage() {
                             <TextField label="a) Escreva uma alternativa correta" fullWidth variant="outlined" value={alternativa1} onChange={(e) => setAlternativa1(e.target.value)} />
                         </Row>
                         <Row className="p-0 m-0 d-flex align-items-center justify-content-center">
-                            <TextField label="b) Escreva uma alternativa correta" fullWidth variant="outlined" value={alternativa2} onChange={(e) => setAlternativa2(e.target.value)} />
+                            <TextField label="b) Escreva uma alternativa incorreta" fullWidth variant="outlined" value={alternativa2} onChange={(e) => setAlternativa2(e.target.value)} />
                         </Row>
                         <Row className="p-0 m-0 d-flex align-items-center justify-content-center">
-                            <TextField label="c) Escreva uma alternativa correta" fullWidth variant="outlined" value={alternativa3} onChange={(e) => setAlternativa3(e.target.value)} />
+                            <TextField label="c) Escreva uma alternativa incorreta" fullWidth variant="outlined" value={alternativa3} onChange={(e) => setAlternativa3(e.target.value)} />
                         </Row>
                         <Row className="p-0 m-0 d-flex align-items-center justify-content-center">
-                            <TextField label="d) Escreva uma alternativa correta" fullWidth variant="outlined" value={alternativa4} onChange={(e) => setAlternativa4(e.target.value)} />
+                            <TextField label="d) Escreva uma alternativa incorreta" fullWidth variant="outlined" value={alternativa4} onChange={(e) => setAlternativa4(e.target.value)} />
                         </Row>
                         <Row className="p-0 m-0 d-flex align-items-center justify-content-center">
-                            <Form.Control type="file" size="lg" onChange={(e) => setImagem(e.target.files[0])} />
+                            <Form.Control type="file" size="lg" value={imagem} onChange={(e) => setImagem(e.target.files[0])} />
                         </Row>
                         <Row className="p-0 m-0 d-flex align-items-center justify-content-center">
                             <Button className="w-100 p-3" variant="success" onClick={adicionarPergunta}>Salvar pergunta</Button>{' '}
@@ -235,7 +236,7 @@ function NovoQuestionarioPage() {
                                         </Row>
                                         <Row>
                                             <Col className="col-md-11">
-                                                <Form.Control type="file" size="lg" onChange={(e) => setImagem(e.target.files[0])} />
+                                                <Form.Control type="file" size="lg" value={imagem} onChange={(e) => setImagem(e.target.files[0])} />
                                             </Col>
                                             <Col className="col-md-1 d-flex align-items-center justify-content-center">
                                                 Fundo
