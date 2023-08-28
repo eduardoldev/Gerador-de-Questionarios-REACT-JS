@@ -70,7 +70,7 @@ function NovoQuestionarioPage() {
                 console.log(novaPergunta);
             })
             .catch((error) => {
-                console.error("Erro ao converter imagem para base64:", error);
+                alert("Selecione uma imagem válida.")
             });
     };
 
@@ -142,9 +142,8 @@ function NovoQuestionarioPage() {
                                     </Row>
                                     <Row  >
                                         <Col className="gap-2 col d-flex align-items-center justify-content-center">
-                                            <Button variant="success" onClick={adicionarPergunta}>Nova pergunta</Button>{' '}
-                                            <Button variant="primary">Visualizar</Button>{' '}
-                                            <Button variant="dark" disabled={questionario.length === 0} onClick={() => { navigate('/mostrarQuestionario', { state: { questionario } }) }}>Concluir</Button>{' '}
+                                            <Button variant="success" onClick={adicionarPergunta}>Salvar pergunta</Button>{' '}
+                                            <Button variant="primary" disabled={questionario.length === 0} onClick={() => { navigate('/mostrarQuestionario', { state: { questionario } }) }}>Iniciar questionario</Button>{' '}
                                         </Col>
                                     </Row>
                                 </Row>
