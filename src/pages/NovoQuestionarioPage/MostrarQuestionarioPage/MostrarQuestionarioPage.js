@@ -58,7 +58,7 @@ function MostrarQuestionarioPage(props) {
                 {questionario.map((questao, index) => {
                     return (<>
                         {index === currentPage && (  // Renderizar apenas a pergunta da página atual
-                            <Container className="vh-100 d-flex col align-items-center" fluid style={{ background: `url(${questao.imagem})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
+                            <Container className="vh-100 d-flex col align-items-center" fluid style={{ background: `url(${questao.imagem})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center' }}>
                                 <Container>
 
                                     <Row className="gap-3">
@@ -99,7 +99,7 @@ function MostrarQuestionarioPage(props) {
                 {questionario.map((questao, index) => {
                     return (<>
                         {index === currentPage && (  // Renderizar apenas a pergunta da página atual
-                            <Container className="vh-100 d-flex col align-items-center" fluid style={{ background: `url(${questao.imagem})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }}>
+                            <Container className="vh-100 d-flex col align-items-center" fluid style={{ background: `url(${questao.imagem})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center' }}>
                                 <div className="bg-dark p-3 rounded mt-3" style={{ position: 'absolute', top: 0 }}>
                                     <Link to='/'>
                                         <BsFillHouseFill color="#fff" size={50} />
