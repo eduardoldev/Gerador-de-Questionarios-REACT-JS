@@ -39,20 +39,13 @@ function NovoQuestionarioPage() {
     };
 
     const adicionarPergunta = () => {
-        const imagemBase64 = (imagem) => {
+        const imagemBase64 = () => {
             return new Promise((resolve, reject) => {
-                if (!imagem) {
-                    alert("Insira uma imagem de fundo.");
-                    return;
-                }
-
                 const reader = new FileReader();
                 reader.readAsDataURL(imagem);
-
                 reader.onload = () => {
                     resolve(reader.result);
                 };
-
                 reader.onerror = (error) => {
                     reject(error);
                 };
