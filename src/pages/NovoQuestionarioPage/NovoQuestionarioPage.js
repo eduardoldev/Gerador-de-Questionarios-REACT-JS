@@ -234,7 +234,7 @@ function NovoQuestionarioPage() {
                                         </Row>
                                         <Row>
                                             <Col className="col-md-11">
-                                                <Form.Control type="file" size="lg" value={imagem} onChange={(e) => setImagem(e.target.files[0])} />
+                                                <Form.Control type="file" size="lg" onChange={(e) => setImagem(e.target.files[0])} />
                                             </Col>
                                             <Col className="col-md-1 d-flex align-items-center justify-content-center">
                                                 Fundo
