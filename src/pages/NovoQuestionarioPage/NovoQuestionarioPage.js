@@ -102,7 +102,7 @@ function NovoQuestionarioPage() {
                                     </Row>
                                     <Row>
                                         <Col className="col-md-11">
-                                            <TextField label="a) Digite a alternativa" fullWidth variant="outlined" value={alternativa1} onChange={(e) => setAlternativa1(e.target.value)} />
+                                            <TextField label="a) Escreva uma alternativa correta" fullWidth variant="outlined" value={alternativa1} onChange={(e) => setAlternativa1(e.target.value)} />
                                         </Col>
                                         <Col className="col-md-1 d-flex align-items-center justify-content-center">
                                             <AiOutlineCheck size={25} color="green" />
@@ -110,7 +110,7 @@ function NovoQuestionarioPage() {
                                     </Row>
                                     <Row>
                                         <Col className="col-md-11">
-                                            <TextField label="b) Digite a alternativa" fullWidth variant="outlined" value={alternativa2} onChange={(e) => setAlternativa2(e.target.value)} />
+                                            <TextField label="b) Escreva uma alternativa incorreta" fullWidth variant="outlined" value={alternativa2} onChange={(e) => setAlternativa2(e.target.value)} />
                                         </Col>
                                         <Col className="col-md-1 d-flex align-items-center justify-content-center">
                                             <BiX size={25} color='red' />
@@ -118,7 +118,7 @@ function NovoQuestionarioPage() {
                                     </Row>
                                     <Row>
                                         <Col className="col-md-11">
-                                            <TextField label="c) Digite a alternativa" fullWidth variant="outlined" value={alternativa3} onChange={(e) => setAlternativa3(e.target.value)} />
+                                            <TextField label="c) Escreva uma alternativa incorreta" fullWidth variant="outlined" value={alternativa3} onChange={(e) => setAlternativa3(e.target.value)} />
                                         </Col>
                                         <Col className="col-md-1 d-flex align-items-center justify-content-center">
                                             <BiX size={25} color='red' />
@@ -126,7 +126,7 @@ function NovoQuestionarioPage() {
                                     </Row>
                                     <Row>
                                         <Col className="col-md-11">
-                                            <TextField label="d) Digite a alternativa" fullWidth variant="outlined" value={alternativa4} onChange={(e) => setAlternativa4(e.target.value)} />
+                                            <TextField label="d) Escreva uma alternativa incorreta" fullWidth variant="outlined" value={alternativa4} onChange={(e) => setAlternativa4(e.target.value)} />
                                         </Col>
                                         <Col className="col-md-1 d-flex align-items-center justify-content-center">
                                             <BiX size={25} color='red' />
@@ -141,16 +141,20 @@ function NovoQuestionarioPage() {
                                         </Col>
                                     </Row>
                                     <Row  >
-                                        <Col className="gap-2 col d-flex align-items-center justify-content-center">
-                                            <Button variant="success" onClick={adicionarPergunta}>Salvar pergunta</Button>{' '}
-                                            <Button variant="primary" disabled={questionario.length === 0} onClick={() => { navigate('/mostrarQuestionario', { state: { questionario } }) }}>Iniciar questionario</Button>{' '}
+                                        <Col className="col-md-11">
+                                            <Button className="w-100 p-3" variant="success" onClick={adicionarPergunta}>Salvar pergunta</Button>{' '}
+                                        </Col>
+                                    </Row>
+                                    <Row>
+                                        <Col className="col-md-11">
+                                            <Button className="w-100 p-3" variant="primary" disabled={questionario.length === 0} onClick={() => { navigate('/mostrarQuestionario', { state: { questionario } }) }}>Iniciar questionario</Button>{' '}
                                         </Col>
                                     </Row>
                                 </Row>
                             </Row>
                         </Form>
                     </Col>
-                    <Col className="col-md-2 bg-white border rounded">
+                    <Col className="col-md-2 bg-white border ">
                         <List
                             sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
                             component="nav"

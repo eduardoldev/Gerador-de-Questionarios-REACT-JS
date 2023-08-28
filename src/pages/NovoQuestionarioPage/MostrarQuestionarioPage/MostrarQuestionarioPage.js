@@ -84,10 +84,10 @@ function MostrarQuestionarioPage(props) {
                                 </Row>
                                 <Row className="mt-3">
                                     <Col>
-                                        <Button variant="success" onClick={() => { setShowCorreta(true); }} className="align-end p-3 w-100">Mostrar resposta</Button>
+                                        <Button variant="success" onClick={() => { setShowCorreta(true); }} className="align-end p-3 w-100 fs-3">Mostrar resposta</Button>
                                     </Col>
                                     <Col>
-                                        <Button variant="primary" className="align-end p-3 w-100" onClick={handleNextQuestion}>Próxima</Button>
+                                        <Button variant="primary" className="align-end p-3 w-100 fs-3" onClick={handleNextQuestion}>Próxima</Button>
                                     </Col>
                                 </Row>
                             </Container>
