@@ -173,10 +173,8 @@ function NovoQuestionarioPage() {
                         <Row className="p-0 m-0 d-flex align-items-center justify-content-center">
                             <Form.Control type="file" size="lg" value={imagem} onChange={(e) => setImagem(e.target.files[0])} />
                         </Row>
-                        <Row className="p-0 m-0 d-flex align-items-center justify-content-center">
+                        <Row className="p-0 m-0 d-flex align-items-center justify-content-center gap-3">
                             <Button className="w-100 p-3" variant="success" onClick={adicionarPergunta}>Salvar pergunta</Button>{' '}
-                        </Row>
-                        <Row className="p-0 m-0 d-flex align-items-center justify-content-center">
                             <Button className="w-100 p-3" variant="primary" disabled={questionario.length === 0} onClick={() => { navigate('/mostrarQuestionario', { state: { questionario } }) }}>Iniciar questionario</Button>{' '}
                         </Row>
                     </Row>
