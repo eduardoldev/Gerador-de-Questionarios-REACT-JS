@@ -171,7 +171,7 @@ function NovoQuestionarioPage() {
                             <TextField label="d) Escreva uma alternativa incorreta" fullWidth variant="outlined" value={alternativa4} onChange={(e) => setAlternativa4(e.target.value)} />
                         </Row>
                         <Row className="p-0 m-0 d-flex align-items-center justify-content-center">
-                            <Form.Control type="file" size="lg" value={imagem} onChange={(e) => setImagem(e.target.files[0])} />
+                            <Form.Control type="file" size="lg" onChange={(e) => setImagem(e.target.files[0])} />
                         </Row>
                         <Row className="p-0 m-0 d-flex align-items-center justify-content-center gap-3">
                             <Button className="w-100 p-3" variant="success" onClick={adicionarPergunta}>Salvar pergunta</Button>{' '}
